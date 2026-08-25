@@ -108,10 +108,14 @@
   table.items td input:focus, table.items td select:focus{outline:none; background:#FAF9FE;}
   table.items td.no{text-align:center; color:var(--muted);}
   table.items td.qty input{text-align:center;}
+  table.items td.qty input::-webkit-inner-spin-button,
+  table.items td.qty input::-webkit-outer-spin-button{-webkit-appearance:none; margin:0;}
+  table.items td.qty input{-moz-appearance:textfield;}
   table.items td.price input{text-align:right;}
-  table.items td.total{text-align:right; font-weight:700; color:var(--purple-dark); background:#FAF9FE; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  table.items td.total{text-align:right; font-weight:700; color:var(--purple-dark); background:#FAF9FE;}
   table.items td.delcell{text-align:center; border:none; padding:0;}
-  table.items td input, table.items td select{overflow:hidden; text-overflow:ellipsis;}
+  table.items td.rowDesc, table.items td .rowProduct{overflow:hidden; text-overflow:ellipsis;}
+  table.items td input.rowDesc, table.items td input.rowProduct{overflow:hidden; text-overflow:ellipsis;}
   .delrow{
     border:none; background:transparent; color:#C0392B; cursor:pointer; font-size:15px; font-weight:700; line-height:1;
     width:22px;height:22px;border-radius:5px;
@@ -251,7 +255,7 @@
       <tr>
         <td class="star">*</td>
         <td class="label"><span class="tr">CEP TELEFONU NUMARASI</span><span class="en">MOBILE</span></td>
-        <td class="val"><input id="f_phone" value="542 686 01 97"></td>
+        <td class="val"><input id="f_phone" value="0850 346 74 87 - Dahili: 102"></td>
       </tr>
       <tr>
         <td class="star">*</td>
@@ -275,9 +279,9 @@
         <col style="width:4%">
         <col style="width:12%">
         <col style="width:42%">
-        <col style="width:9%">
-        <col style="width:5%">
-        <col style="width:13%">
+        <col style="width:8%">
+        <col style="width:8%">
+        <col style="width:11%">
         <col style="width:12%">
         <col style="width:3%">
       </colgroup>
